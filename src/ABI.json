@@ -8,13 +8,7 @@
 			}
 		],
 		"name": "roll",
-		"outputs": [
-			{
-				"internalType": "string[3]",
-				"name": "",
-				"type": "string[3]"
-			}
-		],
+		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
@@ -61,6 +55,19 @@
 				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "rollData",
+		"outputs": [
+			{
+				"internalType": "string[3]",
+				"name": "",
+				"type": "string[3]"
 			}
 		],
 		"stateMutability": "view",
