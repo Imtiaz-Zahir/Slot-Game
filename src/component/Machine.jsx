@@ -23,6 +23,7 @@ export default function Machine(props) {
     try{
       await props.state.contract.methods.roll(amount).send({ from: props.address });
       await props.state.contract.methods.rollData().call().then((data)=>{console.log(data);clearInterval(myIntarval);setResult(data);});
+      await props.state.contract.methods.players(props.address).call().then((balance)=>{props.setBalance(props.state.web3.utils.fromWei(balance,"ether"))});
       event.target.disabled = false;
     } catch(error){
       clearInterval(myIntarval);

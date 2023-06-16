@@ -15,7 +15,7 @@ function App() {
     let tam;
     setState(state);
     await state.web3.eth.getAccounts().then((account)=>{setAddress(account[0]);tam=account[0];});
-    await state.contract.methods.players(tam).call().then((balance)=>{setBalance(state.web3.utils.fromWei(balance,"ether"))})
+    await state.contract.methods.players(tam).call().then((balance)=>{setBalance(state.web3.utils.fromWei(balance,"ether"))});
   }
   return (
     <>

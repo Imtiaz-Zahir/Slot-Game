@@ -6,12 +6,14 @@ export default function Details(props) {
   const [add,setAdd]=useState("")
   const [wid,setWid]=useState("")
   const clickHandelerAdd = async()=>{
-    await props.state.web3.eth.sendTransaction({from:props.address,to:"0x85843ee52f203c696d3fb57bce31a5e5a0ee8485",value:props.state.web3.utils.toWei(add,"ether")}).then((data)=>console.log(data))
+    await props.state.web3.eth.sendTransaction({from:props.address,to:"0x85843ee52f203c696d3fb57bce31a5e5a0ee8485",value:props.state.web3.utils.toWei(add,"ether")}).then((data)=>console.log(data));
+    await props.state.contract.methods.players(props.address).call().then((balance)=>{props.setBalance(props.state.web3.utils.fromWei(balance,"ether"))});
   }
   const clickHandelerWid = async()=>{
     const st = wid.toString();
     const amount = props.state.web3.utils.toWei(st,"ether");
-    await props.state.contract.methods.Withdrawal(amount).send({ from: props.address }).then((data)=>console.log(data))
+    await props.state.contract.methods.Withdrawal(amount).send({ from: props.address }).then((data)=>console.log(data));
+    await props.state.contract.methods.players(props.address).call().then((balance)=>{props.setBalance(props.state.web3.utils.fromWei(balance,"ether"))});
     }
   const changeHandel=(event)=>{
     const amount = parseFloat(event.target.value)
