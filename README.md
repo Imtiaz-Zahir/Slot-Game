@@ -10,11 +10,9 @@ Slot Game is an exciting blockchain-based betting website built using React.js a
 
 3. **Web3.js Integration**: The website integrates Web3.js library to interact with the Ethereum blockchain, enabling seamless betting and transaction processing.
 
-4. **Account Management**: Users can create accounts, manage their betting wallets, and monitor their betting history directly on the platform.
+4. **Real-Time Updates**: Slot Game provides real-time updates on game results, betting odds, and other relevant information to enhance the user experience.
 
-5. **Real-Time Updates**: Slot Game provides real-time updates on game results, betting odds, and other relevant information to enhance the user experience.
-
-6. **Responsive Design**: The website is built with a responsive design, ensuring compatibility across various devices, including desktops, laptops, tablets, and smartphones.
+5. **Responsive Design**: The website is built with a responsive design, ensuring compatibility across various devices, including desktops, laptops, tablets, and smartphones.
 
 ## Getting Started
 
